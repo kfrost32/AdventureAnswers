@@ -55,8 +55,8 @@ p {
   padding: 0;
   margin-bottom: 12px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 30px;
   color: #384452;
   margin-top: 10px;
 }
@@ -64,16 +64,6 @@ p {
 img {
   height: auto;
   max-width: 100%;
-}
-
-#top-image {
-background:url('https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/0/8/8905/red-rocks-park-o.jpg') -25px -50px;
-position:fixed ;
-top:0;
-width:100%;
-z-index:0;
-  height:100%;
-  background-size: calc(100% + 50px);
 }
 
 a {
@@ -160,54 +150,6 @@ a:focus {
   font-size: 12px;
 }
 
-.btn-theme,
-.btn-theme:focus,
-.btn-theme:active,
-.btn-theme.active, {
-  color: #fff;
-  background-color: #384452;
-  border-color: #384452;
-
-  &:hover {
-    color: #fff;
-    background-color: #00b3fe;
-    border-color: #384452;
-  }
-}
-
-.dmbutton:hover,
-.dmbutton:active,
-.dmbutton:focus {
-  color: #ffffff;
-  background-color: #222222;
-  border-color: #ffffff;
-}
-
-.dmbutton {
-  background: rgba(0, 0, 0, 0);
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  padding-top: 1.025rem;
-  padding-right: 2.25rem;
-  letter-spacing: 0.85px;
-  padding-bottom: 1.0875rem;
-  padding-left: 2.25rem;
-  font-size: 1.55rem;
-  cursor: pointer;
-  font-weight: normal;
-  line-height: normal;
-  margin: 0 0 1.25rem;
-  text-decoration: none;
-  text-align: center;
-  display: inline-block;
-  -webkit-transition: background-color 300ms ease-out;
-  -moz-transition: background-color 300ms ease-out;
-  transition: background-color 300ms ease-out;
-  -webkit-appearance: none;
-  font-weight: normal !important;
-}
 
 .mtb {
   margin-top: 80px;
@@ -237,31 +179,46 @@ a:focus {
 
 #headerwrap {
   background-color: #00b3fe;
-  //	min-height: 550px;
-  //	padding-top: 100px;
   padding: 80px 0;
   text-align: center;
-  background: url('https://images.unsplash.com/photo-1486068720048-47715511ce71?dpr=2&auto=format&fit=crop&w=1350&h=490&q=80&cs=tinysrgb&crop=');
+  background: url('https://images.unsplash.com/photo-1486068720048-47715511ce71?dpr=2&auto=format&fit=crop&w=1350&h=520&q=80&cs=tinysrgb&crop=');
   background-size: calc(100% + 50px);
   ackground-size: cover;
   width: 100%;
+  position: relative;
+  &:after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    content: '';
+    transition: all 1s;
+    background: rgba(0,0,0,0.2);
+  }
 }
 
 #headerwrap h3, h5 {
   color: white;
   font-weight: 400;
+  z-index: 99;
 }
 
 #headerwrap h1 {
   color: #fff;
+  position: relative;
   font-weight: 800;
   margin-bottom: 25px;
       text-transform: uppercase;
       font-size: 90px;
+      z-index: 99;
 }
 #headerwrap p{
   color: white;
+  position: relative;
   font-size: 18px;
+  z-index: 99;
 }
 
 #headerwrap .img-responsive {

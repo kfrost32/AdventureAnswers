@@ -20,7 +20,7 @@ li.item {
 }
 li.media{
   border-bottom: 1px solid #f7f7f7;
-  padding: 20px 15px;
+  padding: 20px 0px;
   margin: 0px;
   background: white;
 
@@ -40,6 +40,26 @@ li.media{
     color: #232323;
     font-size: 24px;
   }
+  }
+}
+.item-tabs{
+  border-bottom: 1px solid #efefef;
+  padding: 15px 0;
+  li{
+    display: inline;
+    list-style-type: none;
+    margin-right: 30px;
+    &:active{
+      color: #232323;
+    }
+    a{
+      font-size: 18px;
+      font-weight: 600;
+      color: #232323;
+      &:active{
+        color: #232323;
+      }
+    }
   }
 }
 

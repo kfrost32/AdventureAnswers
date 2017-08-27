@@ -12,16 +12,14 @@
     </div>
     <div class="navbar-collapse collapse navbar-right">
       <ul class="nav navbar-nav">
-        <%= link_to_list_item("Top", items_path) %>
-        <%= link_to_list_item("New", items_path(newest: true)) %>
         <% if current_user %>
-          <%= link_to_list_item 'Submit', new_item_path, class: "btn btn-theme" %>
+          <%= link_to 'Submit', new_item_path, class: 'btn ' %>
           <% if @item && @item.persisted? && @item.user_id == current_user.id %>
             <%= link_to_list_item 'edit', edit_item_path(@item) %>
           <% end %>
         <% else %>
-          <%= link_to_list_item 'Register', new_user_path %>
-          <%= link_to_list_item 'Login', :login %>
+          <%= link_to_list_item 'Join', new_user_path %>
+          <%= link_to_list_item 'Log In', :login %>
         <% end %>
 
         <% if current_user %>

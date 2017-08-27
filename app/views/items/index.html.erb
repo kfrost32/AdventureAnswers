@@ -1,6 +1,10 @@
 <% content_for :headerwrap do %>
   <%= render 'components/login_register' %>
 <% end %>
+<ul class="item-tabs">
+  <%= link_to_list_item("Top", items_path) %>
+  <%= link_to_list_item("New", items_path(newest: true)) %>
+</ul>
 <ul class="media-list">
   <%= render @items %>
 </ul>
