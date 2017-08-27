@@ -1,0 +1,11 @@
+{
+  "name": "Adventure Answers",
+  "description": "Adventure Answers",
+  "logo": "#",
+  "keywords": ["rails", "ruby-on-rails", "hackernews", "producthunt", "reddit"],
+  "env": {
+    "GOOGLE_ANALYTICS": "#",
+    "SITE_TITLE": "#",
+    "SEO_TITLE": "Adventure Answers"
+  }
+}
