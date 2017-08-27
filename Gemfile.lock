@@ -38,6 +38,12 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.3.8)
+    algoliasearch (1.14.0)
+      httpclient (~> 2.8.3)
+      json (>= 1.5.1)
+    algoliasearch-rails (1.20.1)
+      algoliasearch (~> 1.14.0)
+      json (>= 1.5.1)
     arel (6.0.3)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
@@ -82,6 +88,7 @@ GEM
     haml (5.0.2)
       temple (>= 0.8.0)
       tilt
+    httpclient (2.8.3)
     i18n (0.7.0)
     jquery-rails (4.0.3)
       rails-dom-testing (~> 1.0)
@@ -263,6 +270,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  algoliasearch-rails
   bootstrap-sass
   byebug
   dotenv-rails
