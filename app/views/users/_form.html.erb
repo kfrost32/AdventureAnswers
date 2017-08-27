@@ -1,3 +1,4 @@
+<div class="col-lg-6 offset-3">
 <%= simple_form_for(@user, html: { class: 'form-horizontal' }) do |f| %>
   <%= f.error_notification %>
   <%= f.input :username %>
@@ -8,5 +9,5 @@
     <%= f.button :submit, class: 'btn-block' %>
   </div>
 <% end %>
-
+</div>
 
