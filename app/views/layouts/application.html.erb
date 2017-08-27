@@ -6,17 +6,19 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body style="padding-top:70px">
-<%= render 'components/top_navigation' %>
-<%= yield :headerwrap %>
+<body>
+<div style="max-width: 1300px; background: #fff; border-left: 1px solid #e6e6e6;border-right: 1px solid #e6e6e6;margin: 0 auto; min-height: 100vh;">
+  <%= render 'components/top_navigation' %>
+  <%= yield :headerwrap %>
 
-<div class="page-wrapper">
-  <div class="container">
-    <%= yield %>
+  <div class="page-wrapper">
+    <div class="container">
+      <%= yield %>
+    </div>
   </div>
-</div>
 
-<%= render 'components/footer' %>
+  <%= render 'components/footer' %>
+</div>
 
 <%= render 'components/google_analytics' %>
 <%= yield :javascripts %>

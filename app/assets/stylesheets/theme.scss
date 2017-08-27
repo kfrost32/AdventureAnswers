@@ -8,8 +8,7 @@
 	URL: http://alvarez.is
 
 ################################################################# */
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,700,900);
-@import url(http://fonts.googleapis.com/css?family=Graphik:400,900);
+@import url('https://fonts.googleapis.com/css?family=Karla');
 
 //@import url("prettyPhoto.css") screen;
 //@import url("hoverex-all.css") screen;
@@ -25,14 +24,15 @@
 $footerHeight: 60px;
 
 body {
-  background: image_url('mtn-bg.png') center center no-repeat;
+  background: #f7f7f7;
   background-size: cover;
   background-attachment: fixed;
   margin: 0;
   height: 100%;
   color: #384452;
-  font-family: 'Graphik', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 400;
+  -webkit-font-smoothing: antialiased;
   /* Margin bottom by footer height */
 }
 .page-wrapper{
@@ -48,14 +48,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Graphik', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 p {
   padding: 0;
   margin-bottom: 12px;
-  font-family: 'Graphik', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -66,6 +64,16 @@ p {
 img {
   height: auto;
   max-width: 100%;
+}
+
+#top-image {
+background:url('https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/0/8/8905/red-rocks-park-o.jpg') -25px -50px;
+position:fixed ;
+top:0;
+width:100%;
+z-index:0;
+  height:100%;
+  background-size: calc(100% + 50px);
 }
 
 a {
@@ -110,10 +118,10 @@ a:focus {
   min-height: 70px;
   padding-top: 10px;
   margin-bottom: 0px;
+  border:none;
 }
 
 .navbar-brand {
-  font-family: 'Graphik', sans-serif;
   font-weight: 900;
 }
 
@@ -122,9 +130,10 @@ a:focus {
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #232323;
+  color: #999;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 16px;
+  text-transform: none;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
@@ -230,8 +239,12 @@ a:focus {
   background-color: #00b3fe;
   //	min-height: 550px;
   //	padding-top: 100px;
-  padding-bottom: 0px;
+  padding: 80px 0;
   text-align: center;
+  background: url('https://images.unsplash.com/photo-1486068720048-47715511ce71?dpr=2&auto=format&fit=crop&w=1350&h=490&q=80&cs=tinysrgb&crop=');
+  background-size: calc(100% + 50px);
+  ackground-size: cover;
+  width: 100%;
 }
 
 #headerwrap h3, h5 {
@@ -240,11 +253,15 @@ a:focus {
 }
 
 #headerwrap h1 {
-  color: #424141;
+  color: #fff;
+  font-weight: 800;
   margin-bottom: 25px;
-  font-family: GarageGothic-Bold;
       text-transform: uppercase;
       font-size: 90px;
+}
+#headerwrap p{
+  color: white;
+  font-size: 18px;
 }
 
 #headerwrap .img-responsive {

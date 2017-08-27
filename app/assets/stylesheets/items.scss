@@ -19,14 +19,11 @@ li.item {
   }
 }
 li.media{
-  border: 2px solid #efefef;
-  border-bottom: 0px;
+  border-bottom: 1px solid #f7f7f7;
   padding: 20px 15px;
   margin: 0px;
   background: white;
-  &:last-child{
-    border-bottom: 2px solid #efefef;
-  }
+
   .media-left{
     padding: 10px;
     background: #efefef;
@@ -41,8 +38,6 @@ li.media{
   .media-heading{
     a{
     color: #232323;
-    font-family: Sentinel;
-    font-weight: 100;
     font-size: 24px;
   }
   }

@@ -13,12 +13,12 @@
         <small>(<%= URI.parse(item.url).host %>)</small>
       <% else %>
         <%= link_to item.title, item, title: truncate(item.content, length: 30) %>
-        <small><%= link_to '[discussion]', item %></small>
+        <span  style="font-size: 13px !important"><%= link_to '[discussion]', item %></span>
       <% end %>
     </h4>
     <small>
       <%= item.score %> &#128077;
-      by <%= render_link_to_user(item.user) %> <%= time_ago_in_words(item.created_at) %> ago
+      <%= time_ago_in_words(item.created_at) %> ago by <%= render_link_to_user(item.user) %>
       | <%= link_to "#{item.comments_count} &#128172;".html_safe, item %>
     </small>
   </div>
