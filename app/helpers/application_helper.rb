@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def site_title_text
-    ENV["SITE_TITLE"] || "The Industry Log"
+    ENV["SITE_TITLE"] || "The Industry Log (beta)"
   end
 
   def seo_title_text

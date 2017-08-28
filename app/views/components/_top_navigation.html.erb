@@ -14,6 +14,7 @@
     </div>
     <div class="navbar-collapse collapse navbar-right">
       <ul class="nav navbar-nav">
+        <%= link_to_list_item 'About', '/about' %>
         <% if current_user %>
           <%= link_to 'Submit', new_item_path, class: 'btn ' %>
           <% if @item && @item.persisted? && @item.user_id == current_user.id %>

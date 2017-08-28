@@ -4,7 +4,7 @@ module UserItemVotesHelper
   end
 
   def link_to_downvote(object)
-    link_to '&#9660;'.html_safe, vote_item_path(object), method: :delete, class: 'text-muted op3'
+    link_to '&#9650;'.html_safe, vote_item_path(object), method: :delete, class: 'text-muted op3'
   end
 
   def render_votes_for_item(item=nil)
