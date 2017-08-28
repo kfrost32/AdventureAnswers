@@ -16,7 +16,7 @@
       <ul class="nav navbar-nav">
         <%= link_to_list_item 'About', '/about' %>
         <% if current_user %>
-          <%= link_to 'Submit', new_item_path, class: 'btn ' %>
+          <%= link_to 'Submit', new_item_path, class: 'btn btn-primary' %>
           <% if @item && @item.persisted? && @item.user_id == current_user.id %>
             <%= link_to_list_item 'edit', edit_item_path(@item) %>
           <% end %>
