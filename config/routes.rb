@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   resources :users, except: [:index]
   resources :user_sessions, only: [:new, :create, :destroy]
 
+  get '/about' => 'pages#about'
+  get '/search' => 'pages#search'
+
   get 'login' => 'user_sessions#new', as: :login
   match 'logout' => 'user_sessions#destroy', as: :logout, via: [:get, :post]
 

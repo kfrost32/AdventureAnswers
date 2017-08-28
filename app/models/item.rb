@@ -1,8 +1,7 @@
 class Item < ActiveRecord::Base
   include AlgoliaSearch
 
-  algoliasearch per_environment: true do
-    attribute :title, :content
+  algoliasearch do
   end
 
   belongs_to :user

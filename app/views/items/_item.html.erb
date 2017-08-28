@@ -17,7 +17,6 @@
       <% end %>
     </h4>
     <small>
-      <%= item.score %> &#128077;
       <%= time_ago_in_words(item.created_at) %> ago by <%= render_link_to_user(item.user) %>
       | <%= link_to "#{item.comments_count} &#128172;".html_safe, item %>
     </small>

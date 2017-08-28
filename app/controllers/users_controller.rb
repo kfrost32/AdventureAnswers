@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    #   profile page
+    @items = Item.includes(:user).where(user_id: @current_user_id)
   end
 
   def edit

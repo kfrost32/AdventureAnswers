@@ -1,16 +1,11 @@
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
 
+  <h1>
+    <%= @user.username %>
 
-<p>
-  <strong>Karma:</strong>
-  <%= @user.karma %>
-</p>
+  </h1>
+ <p> <%= @user.about %></p>
 
+ <ul class="media-list">
+   <%= render @items %>
+ </ul>
 
-<p>
-  <strong>About:</strong>
-  <%= @user.about %>
-</p>

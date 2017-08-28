@@ -1,32 +1,40 @@
-
+<div class="col-lg-8">
+<div style="border-bottom: 1px solid #efefef; padding-bottom: 30px;">
 <%= content_for(:title) do %>
   <%= @item.title %>
 <% end %>
 <p>
   <strong>
     <h1><%= link_to @item.title, @item, title: @item.url %></h1>
-    <p>
+      <div style="padding: 8px; background: #efefef;display: inline-block; margin-right: 5px;">
       <strong><%= @item.score %></strong>
       <%= render_votes_for_item(@item) %>
-      <span>&#128172; <%= @item.comments_count %></span>
-    </p>
+      </div>
+      <div style="padding: 8px; background: #efefef; display: inline-block;">
+
+      <span> <%= @item.comments_count %> &#128172;</span>
+      </div>
     <% if @item.url.present? %>
     <small>(<%= @item.url %>)</small>
     <% end %>
   </strong>
   <span><small>posted by: <%= link_to @item.user.username, @item.user %></small></span>
 </p>
+<p><%= @item.content %></p>
 
   <% if current_user %>
   <div class="row">
-    <div class="col-lg-6">
+    <div class="col-lg-12">
       <%= simple_form_for([@item, current_user.item_comments.build]) do |f| %>
         <%= f.input :content, label: false, required: true %>
-        <%= f.button :submit %>
+        <%= f.button :submit, 'Comment' %>
       <% end %>
     </div>
   </div>
+  <% else %>
+  Log in to post a comment
   <% end %>
+</div>
 
   <% @comments.each do |comment| %>
     <%= content_tag_for(:div, comment) do %>
@@ -39,3 +47,4 @@
       </small>
     <% end %>
   <% end %>
+  </div>
