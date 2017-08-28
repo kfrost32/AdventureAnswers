@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170814000005) do
+ActiveRecord::Schema.define(version: 20170828183410) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,23 +56,33 @@ ActiveRecord::Schema.define(version: 20170814000005) do
   add_index "items", ["user_id"], name: "index_items_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "username",                             null: false
+    t.string   "username",                                        null: false
     t.string   "crypted_password"
     t.string   "salt"
-    t.boolean  "admin",                default: false, null: false
-    t.boolean  "disabled",             default: false, null: false
-    t.integer  "karma",                default: 0,     null: false
+    t.boolean  "admin",                           default: false, null: false
+    t.boolean  "disabled",                        default: false, null: false
+    t.integer  "karma",                           default: 0,     null: false
     t.text     "about"
     t.string   "auth"
     t.string   "token"
     t.datetime "karma_increment_time"
     t.datetime "pwd_reset"
-    t.integer  "replies_count",        default: 0,     null: false
+    t.integer  "replies_count",                   default: 0,     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "last_login_at"
+    t.datetime "last_logout_at"
+    t.datetime "last_activity_at"
+    t.string   "last_login_from_ip_address"
+    t.string   "reset_password_token"
+    t.datetime "reset_password_token_expires_at"
+    t.datetime "reset_password_email_sent_at"
+    t.string   "email"
   end
 
   add_index "users", ["auth", "token"], name: "index_users_on_auth_and_token", using: :btree
+  add_index "users", ["last_logout_at", "last_activity_at"], name: "index_users_on_last_logout_at_and_last_activity_at", using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", using: :btree
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
   create_table "votes", force: :cascade do |t|

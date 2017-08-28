@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   resources :users, except: [:index]
   resources :user_sessions, only: [:new, :create, :destroy]
 
+  resources :reset_passwords, only: [:new, :create, :update, :edit]
+
   get '/about' => 'pages#about'
   get '/search' => 'pages#search'
 

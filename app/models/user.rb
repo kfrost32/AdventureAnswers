@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
 
   validates :username, uniqueness: true, length: {minimum: 2}
 
+  validates :email, uniqueness: true
+
   has_many :items
   has_many :votes
   has_many :item_comments
