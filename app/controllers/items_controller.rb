@@ -14,6 +14,7 @@ class ItemsController < ApplicationController
 
   def show
     @comments = @item.comments.includes(:user).order(created_at: :asc)
+    @uri = URI(@item.url)
   end
 
   def new

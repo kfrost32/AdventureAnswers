@@ -15,7 +15,7 @@
       <span> <%= @item.comments_count %> &#128172;</span>
       </div>
     <% if @item.url.present? %>
-    <small>(<%= @item.url %>)</small>
+    <small>(<%= @uri.host %>)</small>
     <% end %>
   </strong>
   <span><small>posted by: <%= link_to @item.user.username, @item.user %></small></span>
