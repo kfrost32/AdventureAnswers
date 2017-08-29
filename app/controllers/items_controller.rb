@@ -32,7 +32,6 @@ class ItemsController < ApplicationController
     else
       render :new
     end
-    $client.update('Posted on twitter!')
   end
 
   def update
