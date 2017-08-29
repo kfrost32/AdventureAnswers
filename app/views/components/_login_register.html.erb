@@ -6,6 +6,7 @@
         <% if logged_in? %>
         <h1>Outdoor questions, answered. Also, news.</h1>
         <p>Find answers, articles, and discussions about the outdoors and travel.</p>
+        <%= link_to 'Share a Post', new_item_path, class: 'btn' %>
         <% else %>
         <h1>Outdoor questions, answered. Also news.</h1>
         <p>Find answers, articles, and discussions about the outdoors and travel.</p>
