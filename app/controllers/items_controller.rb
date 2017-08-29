@@ -29,6 +29,7 @@ class ItemsController < ApplicationController
 
     if @item.save
       redirect_to @item, notice: 'Item was successfully created.'
+      Twitter.update(self.title)
     else
       render :new
     end
