@@ -33,6 +33,9 @@ body {
   font-family: 'Karla', sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
+  @media screen and (max-width: 480px){
+    font-family: -apple-system,BlinkMacSystemFont,San Francisco,Helvetica Neue,Helvetica,Ubuntu,Roboto,Noto,Segoe UI,Arial,sans-serif;
+  }
   /* Margin bottom by footer height */
 }
 .page-wrapper{
