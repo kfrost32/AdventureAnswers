@@ -1,7 +1,7 @@
 <%= simple_form_for(@item) do |f| %>
   <%= f.error_notification %>
   <p>Leave the url blank to submit a question.</p>
-  <%= f.input :title, placeholder: "What are your favorite outdoor apps?" %>
+  <%= f.input :title, placeholder: "Give your link, question, or discussion a title" %>
   <div style="padding-bottom: 10px;">Add a link <strong>or</strong> a question.</div>
 
   <%= f.input :url, as: :url, label: false, placeholder: "URL" %>
