@@ -5,6 +5,9 @@ class ItemsController < ApplicationController
 
   def index
     order = params[:newest] ? {created_at: :desc} : {rank: :desc}
+    @page_title       = 'The Industry Log'
+    @page_description = 'Find answers, articles, and discussions about the outdoors and travel.'
+    @page_keywords    = 'Outdoors, Travel, Discussion, Links, Community'
 
     @items = Item.order(order).includes(:user)
     @votes = @items.includes(:votes).each_with_object({}) do |item, object|
@@ -15,6 +18,9 @@ class ItemsController < ApplicationController
   def show
     @comments = @item.comments.includes(:user).order(created_at: :asc)
     @uri = URI(@item.url)
+    @page_title       = @item.title
+    @page_description = 'Find answers, articles, and discussions about the outdoors and travel.'
+    @page_keywords    = 'Outdoors, Travel, Discussion, Links, Community'
   end
 
   def new

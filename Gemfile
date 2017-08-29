@@ -14,6 +14,7 @@ gem 'validate_url'
 gem 'rails_admin', '~> 1.2'
 gem "algoliasearch-rails"
 gem "twitter"
+gem 'meta-tags'
 
 # This allows us to import bower packages
 source 'https://rails-assets.org' do

@@ -2,9 +2,10 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width,user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-  <title><%= "#{yield(:title)} |" %><%= seo_title_text %></title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+  <%= display_meta_tags site: 'The Industry Log' %>
+  <meta property="og:url" content="<%= image_url('fb-share.jpg') %>">
   <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">
   <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
