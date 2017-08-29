@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'validate_url'
 gem 'rails_admin', '~> 1.2'
 gem "algoliasearch-rails"
+gem "twitter"
 
 # This allows us to import bower packages
 source 'https://rails-assets.org' do
