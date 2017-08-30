@@ -6,11 +6,11 @@
         <% if logged_in? %>
         <h1>A one stop shop.</h1>
         <p>Find answers, articles, and discussions about the outdoors and travel.</p>
-        <%= link_to 'Share a Post', new_item_path, class: 'btn' %>
+        <%= link_to 'Share a Post', new_item_path, class: 'btn btn-lg' %>
         <% else %>
         <h1>A one stop shop.</h1>
         <p>Find answers, articles, and discussions about the outdoors and travel.</p>
-        <%= link_to 'Join the Community', new_user_path, class: 'btn btn-lg' %>
+        <%= link_to 'Share a Post', new_user_path, class: 'btn btn-lg' %>
         <% end %>
       </div>
     </div>
