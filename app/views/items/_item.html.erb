@@ -16,8 +16,7 @@
       <% end %>
     </h4>
     <small>
-      <%= time_ago_in_words(item.created_at) %>
-      | <%= link_to "#{item.comments_count} Comment".html_safe.pluralize, item %>
+      <%= time_ago_in_words(item.created_at) %> ago | <%= link_to "#{item.comments_count} Comment".html_safe.pluralize, item %>
     </small>
   </div>
 </li>
